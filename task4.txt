@@ -1,0 +1,26 @@
+Tool	        Action	                Command
+Windows 	Block Inbound Port 23	GUI: New Inbound Rule → Port → TCP, 23 → Block the connection.
+Windows 	Remove Block Rule	GUI: Inbound Rules → Find "Block Telnet Inbound" → Right-click → Delete.
+
+A firewall acts as a gatekeeper between a computer/network and the outside world. It operates by filtering data packets based on a set of predefined rules.
+
+Filtering Mechanism:
+Inspection: A data packet arrives at the firewall.
+
+Rule Check: The firewall inspects the packet's headers, looking at key information:
+
+Source IP Address: Where the packet came from.
+
+Destination IP Address: Where the packet is going.
+
+Protocol: (e.g., TCP, UDP, ICMP).
+
+Port Number: The specific application/service (e.g., Port 80 for HTTP, Port 22 for SSH).
+
+Action: The firewall compares the packet information against its ordered list of rules. The first rule that matches determines the action:
+
+ALLOW/ACCEPT: The packet is permitted to pass through.
+
+DENY/BLOCK: The packet is discarded, and no response is sent to the sender.
+
+REJECT: The packet is discarded, and an error message (like ICMP "Destination Unreachable") is sent back to the sender.
